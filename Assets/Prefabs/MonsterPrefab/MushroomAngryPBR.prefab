@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 7255646602162915626}
   m_Layer: 0
   m_Name: MushroomAngryPBR
-  m_TagString: Enemy
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

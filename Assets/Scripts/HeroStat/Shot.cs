@@ -12,4 +12,5 @@ public class Shot : MonoBehaviour
     {
         Instantiate(BulletPrefab, ShotPos.transform.position, ShotPos.transform.rotation);
     }
+
 }

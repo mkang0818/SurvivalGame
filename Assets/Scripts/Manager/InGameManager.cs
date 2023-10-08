@@ -11,8 +11,9 @@ public class InGameManager : MonoBehaviour
     public GameObject[] CharPrefabs = new GameObject[10];
     public GameObject StoreUI;
 
+    public TextMeshProUGUI TxtStage;
     public TextMeshProUGUI TxtTime;
-    float Timer = 30;
+    float Timer = 5;
     
     [HideInInspector]
     public int StageNum = 1;
@@ -22,7 +23,6 @@ public class InGameManager : MonoBehaviour
     void Start()
     {
         player = Instantiate(CharPrefabs[GameManager.instance.playerNum],Vector3.zero,Quaternion.identity);
-        //player.GetComponent<HeroStat>().data.MoveSp = 15;
     }
 
     // Update is called once per frame
@@ -38,13 +38,46 @@ public class InGameManager : MonoBehaviour
     void TimeManager()
     {
         Timer -= Time.deltaTime;
+        TxtStage.text = StageNum.ToString() + "Stage";
         TxtTime.text = ((int)Timer).ToString();
 
-        StageNum += 1;
         //상점 ui 켜기
         if (Timer <= 0)
         {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject enemy in enemies)
+            {
+                Destroy(enemy);
+            }
+            player.transform.position = Vector3.zero;
             StoreUI.SetActive(true);
         }
+    }
+    public void Reroll()
+    {
+
+    }
+    public void nextStage()
+    {
+        StoreUI.SetActive(false);
+        Timer = 30;
+        StageNum += 1;
+    }
+    public void Get1Btn()
+    {
+
+    }
+    public void Get2Btn()
+    {
+
+    }
+    public void Get3Btn()
+    {
+
+    }
+    public void Get4Btn()
+    {
+
     }
 }

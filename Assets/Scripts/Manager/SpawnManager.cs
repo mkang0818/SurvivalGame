@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    public GameObject IngameManager;
     public GameObject[] Monster = new GameObject[10];
-
+    
     public GameObject[] monsterArr = new GameObject[0];
-    int numarr=0;
+    
 
-    public int stagelevel = 1;
     float level = 1;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     {
         while (true)
         {
-            int randType = Random.Range(0, stagelevel+1);
+            int randType = Random.Range(0, IngameManager.GetComponent<InGameManager>().StageNum);
             float randXPos = Random.Range(-17, 17);
             float randYPos = Random.Range(-17, 17);
 

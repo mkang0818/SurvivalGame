@@ -966,6 +966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f684b15a890cd4f9541e4e53650b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EmyType: {fileID: 0}
+  MoneyPrefab: {fileID: 0}
   hp: 5
 --- !u!54 &6761365640496384643
 Rigidbody:

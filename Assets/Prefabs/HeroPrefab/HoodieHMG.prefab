@@ -5016,11 +5016,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 4265939110547819359}
-  curHP: 10
-  maxHP: 10
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
+  curHP: 30
+  maxHP: 30
   maxEXP: 10
   curEXP: 10
   moveSp: 5
+  AttackSp: 1
+  AttackcoolTime: 1
 --- !u!54 &-5951319659987699515
 Rigidbody:
   m_ObjectHideFlags: 0

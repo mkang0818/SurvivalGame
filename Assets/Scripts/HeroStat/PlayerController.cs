@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class PlayerController : MonoBehaviour
     bool isDodge;
     Vector3 moveVec;
 
-    [Header ("스텟")]
+    public List<GameObject> FoundObjects;
+    public GameObject enemy;
+    public float shortDis;
+    [Header("스텟")]
     public float curHP;
     public float maxHP;
     public float maxEXP;
@@ -43,10 +47,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        //Dodge();
-        Shot();
+        FindEmy();
         UpdateHP();
-        LookMouseCursor();
+        Dead();
     }
     void Move()
     {
@@ -60,38 +63,6 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("Run", moveVec != Vector3.zero);
     }
-    void Dodge()
-    {
-        if (moveVec!=Vector3.zero && isDodge)
-        {
-            moveSp *= 3;
-
-            if (transform.rotation.eulerAngles.y >= 315)
-            {
-                if (hAxis > 0 && vAxis > 0)
-                {
-                    anim.SetTrigger("BackDodge");
-                }
-            }
-            //anim.SetTrigger("isDodge");
-
-            Invoke("DodgeOut",0.5f);
-        }
-    }
-    void DodgeOut()
-    {
-        moveSp /= 3;
-    }
-    public void LookMouseCursor()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hitResult;
-        if (Physics.Raycast(ray, out hitResult))
-        {
-            Vector3 mouseDir = new Vector3(hitResult.point.x, transform.position.y, hitResult.point.z) - transform.position;
-            transform.forward = mouseDir;
-        }
-    }
     void Dead()
     {
         if (curHP <= 0)
@@ -99,18 +70,43 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("GameOverScene");
         }
     }
+    void FindEmy()
+    {
+        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
+
+        if (FoundObjects.Count == 0)
+        {
+            // 처리할 내용 (예: 적이 없는 경우 처리)
+            return;
+        }
+        else Shot();
+
+        shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
+
+        enemy = FoundObjects[0];
+
+        foreach (GameObject found in FoundObjects)
+        {
+            float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
+
+            if (Distance < shortDis)
+            {
+                enemy = found;
+                shortDis = Distance;
+            }
+        }
+        gameObject.transform.DOLookAt(enemy.transform.position, 0.5f);
+    }
     void Shot()
     {
         AttackcoolTime -= Time.deltaTime;
         if (AttackcoolTime <= 0)
         {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                anim.SetTrigger("Shot");
-                AttackcoolTime = AttackSp;
-            }
+            anim.SetTrigger("Shot");
+
+            anim.SetTrigger("Reload");
+            AttackcoolTime = AttackSp;
         }
-        
     }
     void UpdateHP()
     {

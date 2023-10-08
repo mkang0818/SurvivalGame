@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 4187733791742652416}
   m_Layer: 0
   m_Name: Lv6 Monster
-  m_TagString: Lv6Emy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

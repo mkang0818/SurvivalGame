@@ -4939,6 +4939,7 @@ GameObject:
   - component: {fileID: -3393459677194512512}
   - component: {fileID: 6046887931817352108}
   - component: {fileID: -8846981400419812277}
+  - component: {fileID: 3855539088399225337}
   m_Layer: 0
   m_Name: BasicMaleAssaultRifle
   m_TagString: Player
@@ -4996,6 +4997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 3855539088399225337}
   anim: {fileID: 1762018173025169313}
   FoundObjects: []
   enemy: {fileID: 0}
@@ -5052,6 +5054,18 @@ MonoBehaviour:
   ShotPos: {fileID: 5414724014281496509}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &3855539088399225337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762018173025169312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a4778d873d53a469eaf46c230537fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762018173044623599
 GameObject:
   m_ObjectHideFlags: 0

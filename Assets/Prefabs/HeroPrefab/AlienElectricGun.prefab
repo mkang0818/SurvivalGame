@@ -5635,17 +5635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 7934148094586910139}
   anim: {fileID: 7369448170708576211}
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &-2275817451044819583
 Rigidbody:
   m_ObjectHideFlags: 0

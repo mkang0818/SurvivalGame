@@ -13,7 +13,7 @@ public class InGameManager : MonoBehaviour
 
     public TextMeshProUGUI TxtStage;
     public TextMeshProUGUI TxtTime;
-    float Timer = 5;
+    float Timer = 20;
     
     [HideInInspector]
     public int StageNum = 1;

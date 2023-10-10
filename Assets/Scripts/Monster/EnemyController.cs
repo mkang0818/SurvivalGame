@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
         }
         if (col.gameObject.CompareTag("Player"))
         {
-            col.GetComponent<PlayerController>().curHP -= EmyType.EmyStat.EmyAttack;
+            col.GetComponent<PlayerController>().herostat.data.CurHp -= EmyType.EmyStat.EmyAttack;
             print("Ãæµ¹");
         }
     }

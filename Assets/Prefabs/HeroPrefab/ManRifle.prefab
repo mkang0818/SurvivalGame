@@ -4939,9 +4939,9 @@ GameObject:
   - component: {fileID: -3393459677194512512}
   - component: {fileID: 6046887931817352108}
   - component: {fileID: -8846981400419812277}
-  - component: {fileID: 3855539088399225337}
+  - component: {fileID: 4541590032131542810}
   m_Layer: 0
-  m_Name: BasicMaleAssaultRifle
+  m_Name: ManRifle
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4997,18 +4997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  herostat: {fileID: 3855539088399225337}
+  herostat: {fileID: 4541590032131542810}
   anim: {fileID: 1762018173025169313}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &-3393459677194512512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5054,7 +5044,7 @@ MonoBehaviour:
   ShotPos: {fileID: 5414724014281496509}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
---- !u!114 &3855539088399225337
+--- !u!114 &4541590032131542810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5063,9 +5053,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1762018173025169312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a4778d873d53a469eaf46c230537fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b19fd6bd950bdd4e9af73bd9374c6a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &1762018173044623599
 GameObject:
   m_ObjectHideFlags: 0

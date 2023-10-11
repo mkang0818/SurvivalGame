@@ -1756,6 +1756,7 @@ GameObject:
   - component: {fileID: -8060491837382512639}
   - component: {fileID: 6038908417364636311}
   - component: {fileID: 6238906226581912415}
+  - component: {fileID: 370409642608476894}
   m_Layer: 0
   m_Name: SniperRifle
   m_TagString: Player
@@ -1813,17 +1814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 370409642608476894}
   anim: {fileID: 6829002193188956034}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &-8060491837382512639
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1869,6 +1861,21 @@ MonoBehaviour:
   ShotPos: {fileID: 2498305355808370241}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &370409642608476894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829002193188956035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38bcae6bd65a7b47880dc14ef7eb7ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &6829002193210256238
 GameObject:
   m_ObjectHideFlags: 0

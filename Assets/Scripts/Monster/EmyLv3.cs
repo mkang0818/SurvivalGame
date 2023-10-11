@@ -16,15 +16,14 @@ public class EmyLv3 : Enemy
     public override void Attack(GameObject target)
     {
         this.target = target;
+
         StartCoroutine(Lv3Attack());
-
-
-        
     }
     IEnumerator Lv3Attack()
     {
         while (true) 
         {
+
             transform.LookAt(this.target.transform);
 
             transform.position = Vector3.MoveTowards(transform.position, this.target.transform.position, Time.deltaTime * EmyStat.EmyMoveSp);

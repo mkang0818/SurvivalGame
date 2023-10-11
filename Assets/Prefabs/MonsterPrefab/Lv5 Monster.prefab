@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim: {fileID: 8339963984835843037}
+  fireBall: {fileID: 1254724754748870, guid: ead2eb1ec6d8ee54fa5d36c7f5e30eef, type: 3}
 --- !u!114 &8973373829791331805
 MonoBehaviour:
   m_ObjectHideFlags: 0

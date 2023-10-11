@@ -1957,10 +1957,10 @@ GameObject:
   - component: {fileID: -2075701386377725843}
   - component: {fileID: 1188077456222993986}
   - component: {fileID: -8623403999344331018}
-  - component: {fileID: -8489289011411080048}
   - component: {fileID: 3404143380220477238}
+  - component: {fileID: 3413266119533928550}
   m_Layer: 0
-  m_Name: BasicFemalePistol
+  m_Name: WomanPistol
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2016,17 +2016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 3413266119533928550}
   anim: {fileID: 5824428352053320390}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &1188077456222993986
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2057,18 +2048,6 @@ CapsuleCollider:
   m_Height: 1.7034442
   m_Direction: 1
   m_Center: {x: 0, y: 0.82807195, z: 0}
---- !u!114 &-8489289011411080048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5824428352053320391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a4778d873d53a469eaf46c230537fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3404143380220477238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,6 +2063,21 @@ MonoBehaviour:
   ShotPos: {fileID: 3335807248851317181}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &3413266119533928550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824428352053320391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d652118cb8c5b47a1a25bbe68b793e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &5824428352130491590
 GameObject:
   m_ObjectHideFlags: 0

@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 7972011722930601595}
   - component: {fileID: 5659787194891907811}
   - component: {fileID: 5578463773922528441}
+  - component: {fileID: 7721793695755016196}
   m_Layer: 0
   m_Name: NinjaGrenade
   m_TagString: Player
@@ -639,17 +640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 7721793695755016196}
   anim: {fileID: 5130229815644744241}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &7972011722930601595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -695,6 +687,21 @@ MonoBehaviour:
   ShotPos: {fileID: 0}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &7721793695755016196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130229815644744240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d08ba12fd721e9840bf33d11231c7f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &5130229815650095542
 GameObject:
   m_ObjectHideFlags: 0

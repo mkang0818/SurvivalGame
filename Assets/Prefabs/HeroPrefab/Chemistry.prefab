@@ -2759,8 +2759,9 @@ GameObject:
   - component: {fileID: -5443066801930388222}
   - component: {fileID: -3474117270928178171}
   - component: {fileID: -5168777024401469877}
+  - component: {fileID: 2579696768365668932}
   m_Layer: 0
-  m_Name: Chemicalman
+  m_Name: Chemistry
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2816,17 +2817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 2579696768365668932}
   anim: {fileID: 3716350784678828422}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &-5443066801930388222
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2872,6 +2864,21 @@ MonoBehaviour:
   ShotPos: {fileID: 117027962123114055}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &2579696768365668932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716350784678828423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333485f12e6e15d4d8335b12f152b996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &3716350784685269505
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         herostat.Move(this.gameObject, anim);
         herostat.Dead();
-        herostat.FindEmy(anim);
+        //herostat.FindEmy(anim);
 
         UpdateHP();
     }

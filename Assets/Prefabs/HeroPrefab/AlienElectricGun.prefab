@@ -5576,8 +5576,8 @@ GameObject:
   - component: {fileID: 4402091965362599501}
   - component: {fileID: -2275817451044819583}
   - component: {fileID: -7992678380831183974}
-  - component: {fileID: 7934148094586910139}
   - component: {fileID: 6951492405149231348}
+  - component: {fileID: -4203197204280962177}
   m_Layer: 0
   m_Name: AlienElectricGun
   m_TagString: Player
@@ -5635,11 +5635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  herostat: {fileID: 7934148094586910139}
+  herostat: {fileID: -4203197204280962177}
   anim: {fileID: 7369448170708576211}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
 --- !u!54 &-2275817451044819583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5670,18 +5667,6 @@ CapsuleCollider:
   m_Height: 1.7034442
   m_Direction: 1
   m_Center: {x: 0, y: 0.82807195, z: 0}
---- !u!114 &7934148094586910139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7369448170708576210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b19fd6bd950bdd4e9af73bd9374c6a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6951492405149231348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5697,6 +5682,21 @@ MonoBehaviour:
   ShotPos: {fileID: 5071805835881744298}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &-4203197204280962177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369448170708576210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063fe47ee32d2144c9124a466060b93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &7369448170710031444
 GameObject:
   m_ObjectHideFlags: 0

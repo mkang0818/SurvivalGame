@@ -1812,8 +1812,9 @@ GameObject:
   - component: {fileID: 6335742154634169918}
   - component: {fileID: -8085998916280265337}
   - component: {fileID: 1520579958062413881}
+  - component: {fileID: 5157114790100190598}
   m_Layer: 0
-  m_Name: BearDefaultSawGun
+  m_Name: BearSawGun
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1869,17 +1870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 5157114790100190598}
   anim: {fileID: 909545961731707778}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &6335742154634169918
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1925,6 +1917,21 @@ MonoBehaviour:
   ShotPos: {fileID: 766449175461271472}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &5157114790100190598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909545961731707779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ca06f9520d97f46a38f840fe498fa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
 --- !u!1 &909545961750131916
 GameObject:
   m_ObjectHideFlags: 0

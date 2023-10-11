@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public  class BasicHero7 : HeroStat
+public  class PierrotHero : HeroStat
 {
     public override void InitStat()
     {

@@ -11,9 +11,11 @@ public class InGameManager : MonoBehaviour
     public GameObject[] CharPrefabs = new GameObject[10];
     public GameObject StoreUI;
 
+    public GameObject[] SpawnObj = new GameObject[7];
+
     public TextMeshProUGUI TxtStage;
     public TextMeshProUGUI TxtTime;
-    float Timer = 20;
+    float Timer = 30;
     
     [HideInInspector]
     public int StageNum = 1;
@@ -30,6 +32,34 @@ public class InGameManager : MonoBehaviour
     {
         TimeManager();
         MoneyUpdate();
+        Spawn();
+    }
+    void Spawn()
+    {
+        switch (StageNum)
+        {
+            case 1:
+                SpawnObj[0].SetActive(true);
+                break;
+            case 3:
+                SpawnObj[1].SetActive(true);
+                break;
+            case 6:
+                SpawnObj[2].SetActive(true);
+                break;
+            case 9:
+                SpawnObj[3].SetActive(true);
+                break;
+            case 11:
+                SpawnObj[4].SetActive(true);
+                break;
+            case 14:
+                SpawnObj[5].SetActive(true);
+                break;
+            case 20:
+                print("보스 출연");
+                break;
+        }
     }
     void MoneyUpdate()
     {

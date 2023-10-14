@@ -4940,6 +4940,7 @@ GameObject:
   - component: {fileID: 6046887931817352108}
   - component: {fileID: -8846981400419812277}
   - component: {fileID: 4541590032131542810}
+  - component: {fileID: 807993245}
   m_Layer: 0
   m_Name: ManRifle
   m_TagString: Player
@@ -5059,6 +5060,23 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+--- !u!114 &807993245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762018173025169312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 1762018172079144263}
+  mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  fadeTime: 2
 --- !u!1 &1762018173044623599
 GameObject:
   m_ObjectHideFlags: 0

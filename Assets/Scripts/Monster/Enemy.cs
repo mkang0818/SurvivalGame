@@ -20,6 +20,8 @@ public abstract class Enemy : MonoBehaviour
     {
         if (EmyStat.EmyHP <= 0)
         {
+            GameObject.FindWithTag("Player").GetComponent<PlayerController>().herostat.data.CurExp++;
+
             Destroy(gameObject);
             Instantiate(Money, transform.position,Quaternion.identity);
         }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7539128706362253231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin01Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 763313767220870878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_pinky02Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459824826124470543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_middle03Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8643364623901822980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_middle02Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967702390312087635}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_index02Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5691452049903390052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_tail01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6810432612768055324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_thumb03Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4806663575410478162}
   - component: {fileID: 2439942829620020667}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NagaWizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6829163995422985113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_tail02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8673011944833448924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_hornLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -445,7 +445,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7430749419161741796}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_spine02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4842866232435218248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_spine01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -510,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4779040595474352772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin02Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972679412727855004}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_index03Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1613687584566673101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin04Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,7 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7917503948447739558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_tail03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3496984417240134320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_spine03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8670509574706612371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_lowerMouth01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4337801221630033323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_staff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8062322493282170523}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_middle01Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8138902464438842725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_thumb01Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7027443980683934333}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_eyeRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5425749824699048958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_middle02Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2238981596055582945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_middle03Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7122033908738635431}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_middle01Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8581567025613043972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_thumb03Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8831598257415117473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_pinky01Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8698873318163847259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_thumb01Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212120269156893301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_handRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2414655960163871098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_lowerArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1085,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404733705033396271}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_tail06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9070412165277995626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_lowerMouth03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5638282720134715683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin03Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4050188195617305334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_index01Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332167961776333354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_lowerArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4575597623016313031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_upperMouth03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1276,7 +1276,7 @@ GameObject:
   - component: {fileID: 9124409945607033292}
   - component: {fileID: 1932869232648817231}
   - component: {fileID: 6299823859399356717}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NagaWizardStaff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1357,7 +1357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4171964558174600897}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_eyeLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1388,7 +1388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7889711376352614777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_upperMouth01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1420,7 +1420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1188987902392264682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_pinky03Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634661829315178965}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_lowerMouth02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8293009725356852546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1521,7 +1521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3921502953243618381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin02Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1552,7 +1552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6515498778536882428}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_headFin01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,7 +1584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8335877834497728591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin04Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199111415961746176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_pinky01Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1647,7 +1647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7220103064704360079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_headFin02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1678,7 +1678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3980179382306527575}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_tail05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1710,7 +1710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1825514826052142741}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_index01Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6388395217156140390}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_index02Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6551470114082761574}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_index03Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1805,7 +1805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2629942995727886338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_pinky02Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1837,7 +1837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3709842364325523668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_neck03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1871,7 +1871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5218947879334666170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_handLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +1907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7411376022171901828}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_pinky03Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1938,7 +1938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8614921509016309327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_thumb02Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1970,7 +1970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7248243469183789223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2003,7 +2003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8672675979204617112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_tail04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2035,7 +2035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732560491600125504}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_bellyArmor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2066,7 +2066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3879710255552451632}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin01Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2098,7 +2098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4328108309741386908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_upperArmLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2135,7 +2135,7 @@ GameObject:
   - component: {fileID: 2639188505810754840}
   - component: {fileID: -971940406925791293}
   - component: {fileID: 8718369847987775677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FinalBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7274325205642637296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_hornRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2278,7 +2278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1089429543064252077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_neck01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2310,7 +2310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2643302809364562720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_sideFin03Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2342,7 +2342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3587360682451636190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_upperArmRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2374,7 +2374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2678414041567304081}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_upperMouth02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2406,7 +2406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9115273520864853751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_neck02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2440,7 +2440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2971122498565907391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: nagaWizard_thumb02Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

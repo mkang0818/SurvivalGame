@@ -13,43 +13,24 @@ public  class ManHero : HeroStat
 
         data.MaxHp = 10;
         data.CurHp = 10;
-
-        data.HpRecovery = 10;
+        data.HpRecovery = 0.5f;
 
         data.AttackSp = 1;
         data.AttackcoolTime = 1;
 
-        data.Damage = 10;
-        data.LongDamage = 10;
-        data.ShortDamage = 10;
+        data.MaxbulletCount = 30;
+        data.CurbulletCount = 30;
+        data.bulletCount = 5;
 
-        /*
-       레벨
+        data.Damage = 3;
+        data.LongDamage = 3;
+        data.Accuracy = 0.5f;
+        data.Range = 10;
+        data.defense = 3;
 
-최대hp
-hp재생
-생명훔침
-데미지
-근거리데미지
-원거리데미지
-원소데미지
-공격속도
-치명타율
-엔지니어링
-범위
-방어구
-회피
-속도
-행운
-수확
-
-무기
-대미지
-치명타
-쿨타임
-넉백
-범위
-         */
+        data.money = 0.1f;
+        data.lucky = 0.1f;
+        data.Science = 0.1f;
     }
 
     public override void Move(GameObject player, Animator anim)

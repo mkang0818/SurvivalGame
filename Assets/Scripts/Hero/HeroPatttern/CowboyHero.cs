@@ -21,8 +21,7 @@ public  class CowboyHero : HeroStat
 
         data.Damage = 10;
         data.LongDamage = 10;
-        data.ShortDamage = 10;
-
+        data.Range = 5;
         //lucky, 
     }
 

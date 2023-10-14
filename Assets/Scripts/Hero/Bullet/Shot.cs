@@ -10,7 +10,9 @@ public class Shot : MonoBehaviour
     
     public void ShotEvent()
     {
-        Instantiate(BulletPrefab, ShotPos.transform.position, ShotPos.transform.rotation);
+        GameObject bullet = Instantiate(BulletPrefab, ShotPos.transform.position, ShotPos.transform.rotation);
+
+        Destroy(bullet, 0.1f);
     }
 
 }

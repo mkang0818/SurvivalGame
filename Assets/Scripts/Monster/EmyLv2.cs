@@ -33,20 +33,16 @@ public class EmyLv2 : Enemy
             if (Distance < 10)
             {
                 Rushcooltime -= Time.deltaTime;
-                
-                if (Rushcooltime >= 0.3f)
-                {
-                    print(11);
-                    Vector3 moveDir = transform.forward;
-                    transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, Time.deltaTime * 10);
-                }
-                else if (Rushcooltime <= 0)
-                {
-                    print(22);
 
+                Vector3 moveDir = transform.forward;
+                transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, Time.deltaTime * 10);
+
+                if (Rushcooltime <= 0)
+                {
                     rush = false;
                 }
                 else rush = true;
+
             }
             else
             {
@@ -56,7 +52,6 @@ public class EmyLv2 : Enemy
                     transform.LookAt(target.transform);
 
                     transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * EmyStat.EmyMoveSp);
-                    Rushcooltime = 1f;
                 }
             }
 

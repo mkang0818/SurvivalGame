@@ -31,12 +31,14 @@ public class PlayerController : MonoBehaviour
     {
         herostat.Move(this.gameObject, anim);
         herostat.Dead();
-        //herostat.FindEmy(anim);
+        herostat.FindEmy(anim);
 
         UpdateHP();
     }
     void UpdateHP()
     {
+        herostat.data.CurHp += herostat.data.HpRecovery;
+
         hpBar.value = Mathf.Lerp(hpBar.value, herostat.data.CurHp / herostat.data.MaxHp, Time.deltaTime * 10);
     }
     private void OnTriggerEnter(Collider col)
@@ -44,7 +46,12 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.CompareTag("Money"))
         {
             Destroy(col.gameObject);
+            herostat.data.CurHp += herostat.data.HpRecovery;
             InGameManager.GetComponent<InGameManager>().money += 1;
+
+            Collider[] coll = Physics.OverlapSphere(col.transform.position, herostat.data.lucky, 6);
+            
+            if(coll != null) print(coll[0].gameObject); Destroy(coll[0].gameObject);
         }
     }
 }

@@ -21,8 +21,9 @@ public  class WomanHero : HeroStat
 
         data.Damage = 10;
         data.LongDamage = 10;
-        data.ShortDamage = 10;
 
+
+        data.Range = 7;
         //lucky, 
     }
 

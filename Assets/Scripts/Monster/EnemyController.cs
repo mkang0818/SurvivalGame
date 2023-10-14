@@ -26,14 +26,7 @@ public class EnemyController : MonoBehaviour
     {
         EmyType.Dead(MoneyPrefab);
     }
-    void Dead()
-    {
-        if (hp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-    void followTarget() 
+    void followTarget()
     {
         transform.LookAt(target.transform);
 
@@ -48,8 +41,21 @@ public class EnemyController : MonoBehaviour
         }
         if (col.gameObject.CompareTag("Player"))
         {
-            col.GetComponent<PlayerController>().herostat.data.CurHp -= EmyType.EmyStat.EmyAttack;
-            print("충돌");
+            bool isEvasion = RandomEvasion(col.GetComponent<PlayerController>().herostat.data.lucky);
+
+            if (isEvasion)
+            {
+                print("회피!!");
+            }
+            else
+            {
+                col.GetComponent<PlayerController>().herostat.data.CurHp -= (int)(EmyType.EmyStat.EmyAttack - (0.5 * col.GetComponent<HeroStat>().data.defense));
+            }
         }
+    }
+    bool RandomEvasion(float persent)
+    {
+        float randomValue = Random.value;
+        return randomValue <= persent;
     }
 }

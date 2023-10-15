@@ -1896,6 +1896,7 @@ GameObject:
   - component: {fileID: -7381888508945556314}
   - component: {fileID: 6717771179439571861}
   - component: {fileID: 6758776080162145058}
+  - component: {fileID: 4965776246117349943}
   m_Layer: 0
   m_Name: MiniGun
   m_TagString: Player
@@ -2015,6 +2016,34 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+--- !u!114 &4965776246117349943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776543977523952592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Body_renderer: {fileID: 776543978290612140}
+  Body_mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  Body_mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  Body_mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  _Weapon_renderer:
+  - {fileID: 2839164151196938297}
+  Weapon_mtrlOrg: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  Weapon_mtrlDissolve: {fileID: 2100000, guid: 93dc0c48dad559a44aa42d62c6b70c7d, type: 2}
+  Weapon_mtrlPhase: {fileID: 2100000, guid: d2b667a1f266427498b8d6e94c7da2e3, type: 2}
+  _Head_renderer: {fileID: 776543979117625868}
+  Head_mtrlOrg: {fileID: 2100000, guid: 00eb1ba92a205e143944fa63388db963, type: 2}
+  Head_mtrlDissolve: {fileID: 2100000, guid: 45e4e030375bc134eaa84ee66b764451, type: 2}
+  Head_mtrlPhase: {fileID: 2100000, guid: 9836a2d0361cde940a4d40d94af96d90, type: 2}
+  BodyfadeTime: 2
+  WeaponfadeTime: 1
+  HeadfadeTime: 2
 --- !u!1 &776543977569732923
 GameObject:
   m_ObjectHideFlags: 0
@@ -7544,6 +7573,12 @@ PrefabInstance:
 --- !u!4 &1680528271546110125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3337108411455458867, guid: 79cfad6d28604f54a97b32d45af9d2b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4115628034319752862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2839164151196938297 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2196376887936773799, guid: 79cfad6d28604f54a97b32d45af9d2b2,
     type: 3}
   m_PrefabInstance: {fileID: 4115628034319752862}
   m_PrefabAsset: {fileID: 0}

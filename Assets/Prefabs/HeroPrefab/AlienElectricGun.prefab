@@ -5578,6 +5578,7 @@ GameObject:
   - component: {fileID: -7992678380831183974}
   - component: {fileID: 6951492405149231348}
   - component: {fileID: -4203197204280962177}
+  - component: {fileID: -806360403152416096}
   m_Layer: 0
   m_Name: AlienElectricGun
   m_TagString: Player
@@ -5697,6 +5698,35 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+--- !u!114 &-806360403152416096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369448170708576210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Body_renderer: {fileID: 7369448168749345237}
+  Body_mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  Body_mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  Body_mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  _Weapon_renderer:
+  - {fileID: 9019704550743341753}
+  - {fileID: 2648110161961698292}
+  Weapon_mtrlOrg: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  Weapon_mtrlDissolve: {fileID: 2100000, guid: 93dc0c48dad559a44aa42d62c6b70c7d, type: 2}
+  Weapon_mtrlPhase: {fileID: 2100000, guid: d2b667a1f266427498b8d6e94c7da2e3, type: 2}
+  _Head_renderer: {fileID: 7369448168782264921}
+  Head_mtrlOrg: {fileID: 2100000, guid: 00eb1ba92a205e143944fa63388db963, type: 2}
+  Head_mtrlDissolve: {fileID: 2100000, guid: 45e4e030375bc134eaa84ee66b764451, type: 2}
+  Head_mtrlPhase: {fileID: 2100000, guid: 9836a2d0361cde940a4d40d94af96d90, type: 2}
+  BodyfadeTime: 2
+  WeaponfadeTime: 1
+  HeadfadeTime: 2
 --- !u!1 &7369448170710031444
 GameObject:
   m_ObjectHideFlags: 0
@@ -6936,6 +6966,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71c7a22b614cbb443877d9ba29e9999d, type: 3}
+--- !u!137 &9019704550743341753 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8842376448992230921, guid: 71c7a22b614cbb443877d9ba29e9999d,
+    type: 3}
+  m_PrefabInstance: {fileID: 547753637883004080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9019704550756510617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8842376448995045161, guid: 71c7a22b614cbb443877d9ba29e9999d,
@@ -8289,6 +8325,12 @@ PrefabInstance:
 --- !u!4 &2648110161948005076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8842376448995045161, guid: 71c7a22b614cbb443877d9ba29e9999d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6776110535539850749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2648110161961698292 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8842376448992230921, guid: 71c7a22b614cbb443877d9ba29e9999d,
     type: 3}
   m_PrefabInstance: {fileID: 6776110535539850749}
   m_PrefabAsset: {fileID: 0}

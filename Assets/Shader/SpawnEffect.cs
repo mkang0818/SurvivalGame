@@ -11,7 +11,7 @@ public class SpawnEffect : MonoBehaviour
     [SerializeField] private Material Body_mtrlPhase;
 
     [Header("Weapon")]
-    [SerializeField] private Renderer _Weapon_renderer;
+    [SerializeField] private Renderer[] _Weapon_renderer = new Renderer[2];
     [SerializeField] private Material Weapon_mtrlOrg;
     [SerializeField] private Material Weapon_mtrlDissolve;
     [SerializeField] private Material Weapon_mtrlPhase;
@@ -33,7 +33,8 @@ public class SpawnEffect : MonoBehaviour
     void Start()
     {
         _Body_renderer.material = Body_mtrlPhase;
-        _Weapon_renderer.material = Weapon_mtrlPhase;
+        for(int i=0;i< _Weapon_renderer.Length; i++)  _Weapon_renderer[i].material = Weapon_mtrlPhase;
+
         BodyDofade(0, 2, BodyfadeTime);
         WeaponDofade(0, 2, WeaponfadeTime);
 
@@ -67,11 +68,11 @@ public class SpawnEffect : MonoBehaviour
     }
     void WeaponTweenOnUpdate(float value)
     {
-        _Weapon_renderer.material.SetFloat("_Split_Value", value);
+        for (int i = 0; i < _Weapon_renderer.Length; i++)  _Weapon_renderer[i].material.SetFloat("_Split_Value", value);
     }
     void WeaponTweenOnComplte()
     {
-        _Weapon_renderer.material = Body_mtrlOrg;
+        for (int i = 0; i < _Weapon_renderer.Length; i++) _Weapon_renderer[i].material = Body_mtrlOrg;
     }
 
     //HeadFade

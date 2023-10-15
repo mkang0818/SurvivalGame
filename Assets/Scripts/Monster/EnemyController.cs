@@ -16,7 +16,6 @@ public class EnemyController : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
 
-
         EmyType.initSetting();
         EmyType.Attack(target);
     }

@@ -1465,7 +1465,6 @@ GameObject:
   - component: {fileID: -1651998875173360583}
   - component: {fileID: -3000583643761243072}
   - component: {fileID: -5483625652965300582}
-  - component: {fileID: 3451868787633272350}
   m_Layer: 0
   m_Name: HeroCrossBow
   m_TagString: Player
@@ -1523,17 +1522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 0}
   anim: {fileID: 79219089695756002}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &-1651998875173360583
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1579,18 +1569,6 @@ MonoBehaviour:
   ShotPos: {fileID: 8181315256839415150}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
---- !u!114 &3451868787633272350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79219089695756003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a4778d873d53a469eaf46c230537fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &79219089696929125
 GameObject:
   m_ObjectHideFlags: 0

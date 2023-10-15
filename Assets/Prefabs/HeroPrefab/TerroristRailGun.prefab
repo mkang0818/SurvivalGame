@@ -4611,6 +4611,7 @@ GameObject:
   - component: {fileID: 1134674178166905810}
   - component: {fileID: 2471323898392799403}
   - component: {fileID: -6979935313142588358}
+  - component: {fileID: -1070300682065315238}
   m_Layer: 0
   m_Name: TerroristRailGun
   m_TagString: Player
@@ -4668,17 +4669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  herostat: {fileID: 0}
   anim: {fileID: 6067343141195501497}
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  curHP: 30
-  maxHP: 30
-  maxEXP: 10
-  curEXP: 10
-  moveSp: 5
-  AttackSp: 1
-  AttackcoolTime: 1
 --- !u!54 &1134674178166905810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4724,6 +4716,34 @@ MonoBehaviour:
   ShotPos: {fileID: 2949820627604601927}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
+--- !u!114 &-1070300682065315238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6067343141195501496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Body_renderer: {fileID: 6067343140195412371}
+  Body_mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  Body_mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  Body_mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  _Weapon_renderer:
+  - {fileID: 2140942133719730537}
+  Weapon_mtrlOrg: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  Weapon_mtrlDissolve: {fileID: 2100000, guid: 93dc0c48dad559a44aa42d62c6b70c7d, type: 2}
+  Weapon_mtrlPhase: {fileID: 2100000, guid: d2b667a1f266427498b8d6e94c7da2e3, type: 2}
+  _Head_renderer: {fileID: 6067343139802054767}
+  Head_mtrlOrg: {fileID: 2100000, guid: 00eb1ba92a205e143944fa63388db963, type: 2}
+  Head_mtrlDissolve: {fileID: 2100000, guid: 45e4e030375bc134eaa84ee66b764451, type: 2}
+  Head_mtrlPhase: {fileID: 2100000, guid: 9836a2d0361cde940a4d40d94af96d90, type: 2}
+  BodyfadeTime: 2
+  WeaponfadeTime: 1
+  HeadfadeTime: 2
 --- !u!1 &6067343141207784787
 GameObject:
   m_ObjectHideFlags: 0
@@ -6684,6 +6704,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 180fdca6a657c804ea236f9f0ac7d81b, type: 3}
+--- !u!137 &2140942133719730537 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2273022344556391108, guid: 180fdca6a657c804ea236f9f0ac7d81b,
+    type: 3}
+  m_PrefabInstance: {fileID: 161358006461080493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2140942133733824589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2273022344544402400, guid: 180fdca6a657c804ea236f9f0ac7d81b,

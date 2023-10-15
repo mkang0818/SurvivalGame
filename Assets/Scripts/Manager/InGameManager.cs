@@ -68,7 +68,7 @@ public class InGameManager : MonoBehaviour
     void TimeManager()
     {
         Timer -= Time.deltaTime;
-        TxtStage.text = StageNum.ToString() + "Stage";
+        //TxtStage.text = StageNum.ToString() + "Stage";
         TxtTime.text = ((int)Timer).ToString();
 
         //상점 ui 켜기

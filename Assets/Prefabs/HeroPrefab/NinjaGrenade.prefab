@@ -583,6 +583,7 @@ GameObject:
   - component: {fileID: 5659787194891907811}
   - component: {fileID: 5578463773922528441}
   - component: {fileID: 7721793695755016196}
+  - component: {fileID: -4811962939856734333}
   m_Layer: 0
   m_Name: NinjaGrenade
   m_TagString: Player
@@ -702,6 +703,34 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+--- !u!114 &-4811962939856734333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130229815644744240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Body_renderer: {fileID: 5130229815597652250}
+  Body_mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  Body_mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  Body_mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  _Weapon_renderer:
+  - {fileID: 370297043567420089}
+  Weapon_mtrlOrg: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  Weapon_mtrlDissolve: {fileID: 2100000, guid: 93dc0c48dad559a44aa42d62c6b70c7d, type: 2}
+  Weapon_mtrlPhase: {fileID: 2100000, guid: d2b667a1f266427498b8d6e94c7da2e3, type: 2}
+  _Head_renderer: {fileID: 5130229815608152597}
+  Head_mtrlOrg: {fileID: 2100000, guid: 00eb1ba92a205e143944fa63388db963, type: 2}
+  Head_mtrlDissolve: {fileID: 2100000, guid: 45e4e030375bc134eaa84ee66b764451, type: 2}
+  Head_mtrlPhase: {fileID: 2100000, guid: 9836a2d0361cde940a4d40d94af96d90, type: 2}
+  BodyfadeTime: 2
+  WeaponfadeTime: 1
+  HeadfadeTime: 2
 --- !u!1 &5130229815650095542
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,6 +8423,12 @@ PrefabInstance:
 --- !u!4 &370297043565125721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7780763529671798588, guid: 61865cafb461b3b48a451dca4f88e17a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7987516596106383205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &370297043567420089 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7780763529669504476, guid: 61865cafb461b3b48a451dca4f88e17a,
     type: 3}
   m_PrefabInstance: {fileID: 7987516596106383205}
   m_PrefabAsset: {fileID: 0}

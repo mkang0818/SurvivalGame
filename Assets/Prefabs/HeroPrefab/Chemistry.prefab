@@ -2760,6 +2760,7 @@ GameObject:
   - component: {fileID: -3474117270928178171}
   - component: {fileID: -5168777024401469877}
   - component: {fileID: 2579696768365668932}
+  - component: {fileID: 8266027180165750165}
   m_Layer: 0
   m_Name: Chemistry
   m_TagString: Player
@@ -2879,6 +2880,34 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+--- !u!114 &8266027180165750165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716350784678828423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Body_renderer: {fileID: 3716350784685269507}
+  Body_mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  Body_mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  Body_mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  _Weapon_renderer:
+  - {fileID: 436253493255610469}
+  Weapon_mtrlOrg: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  Weapon_mtrlDissolve: {fileID: 2100000, guid: 93dc0c48dad559a44aa42d62c6b70c7d, type: 2}
+  Weapon_mtrlPhase: {fileID: 2100000, guid: d2b667a1f266427498b8d6e94c7da2e3, type: 2}
+  _Head_renderer: {fileID: 3716350784481340752}
+  Head_mtrlOrg: {fileID: 2100000, guid: 00eb1ba92a205e143944fa63388db963, type: 2}
+  Head_mtrlDissolve: {fileID: 2100000, guid: 45e4e030375bc134eaa84ee66b764451, type: 2}
+  Head_mtrlPhase: {fileID: 2100000, guid: 9836a2d0361cde940a4d40d94af96d90, type: 2}
+  BodyfadeTime: 2
+  WeaponfadeTime: 1
+  HeadfadeTime: 2
 --- !u!1 &3716350784685269505
 GameObject:
   m_ObjectHideFlags: 0
@@ -7459,6 +7488,12 @@ PrefabInstance:
 --- !u!4 &117027962123114055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3980012198153823212, guid: ce5dc50b63174014f92200f39ed282d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3937303097298974123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &436253493255610469 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3506613558081934798, guid: ce5dc50b63174014f92200f39ed282d1,
     type: 3}
   m_PrefabInstance: {fileID: 3937303097298974123}
   m_PrefabAsset: {fileID: 0}

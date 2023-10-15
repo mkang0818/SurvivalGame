@@ -1959,6 +1959,7 @@ GameObject:
   - component: {fileID: -8623403999344331018}
   - component: {fileID: 3404143380220477238}
   - component: {fileID: 3413266119533928550}
+  - component: {fileID: -243466298917629637}
   m_Layer: 0
   m_Name: WomanPistol
   m_TagString: Player
@@ -2078,6 +2079,34 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+--- !u!114 &-243466298917629637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824428352053320391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456704c8b97632c4582f2219908da545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Body_renderer: {fileID: 5824428351877855325}
+  Body_mtrlOrg: {fileID: 2100000, guid: 9a563ffc77d94094bac866f46e58cfa5, type: 2}
+  Body_mtrlDissolve: {fileID: 2100000, guid: b57e516e1feb4234db9a122afde4bc28, type: 2}
+  Body_mtrlPhase: {fileID: 2100000, guid: ad50d0b0d94fecf4cb01b3a25aeb7535, type: 2}
+  _Weapon_renderer:
+  - {fileID: 1967027970974740022}
+  Weapon_mtrlOrg: {fileID: 2100000, guid: f46d64b56f1dfcf4e9e43dbed6748fe9, type: 2}
+  Weapon_mtrlDissolve: {fileID: 2100000, guid: 93dc0c48dad559a44aa42d62c6b70c7d, type: 2}
+  Weapon_mtrlPhase: {fileID: 2100000, guid: d2b667a1f266427498b8d6e94c7da2e3, type: 2}
+  _Head_renderer: {fileID: 5824428352167543388}
+  Head_mtrlOrg: {fileID: 2100000, guid: 00eb1ba92a205e143944fa63388db963, type: 2}
+  Head_mtrlDissolve: {fileID: 2100000, guid: 45e4e030375bc134eaa84ee66b764451, type: 2}
+  Head_mtrlPhase: {fileID: 2100000, guid: 9836a2d0361cde940a4d40d94af96d90, type: 2}
+  BodyfadeTime: 2
+  WeaponfadeTime: 1
+  HeadfadeTime: 2
 --- !u!1 &5824428352130491590
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,6 +7223,12 @@ PrefabInstance:
 --- !u!4 &1967027970972445910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3823321262692109988, guid: 226c568e48d1bbc45a3110f8660d2e2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3333618009849193074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1967027970974740022 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3823321262689815620, guid: 226c568e48d1bbc45a3110f8660d2e2c,
     type: 3}
   m_PrefabInstance: {fileID: 3333618009849193074}
   m_PrefabAsset: {fileID: 0}

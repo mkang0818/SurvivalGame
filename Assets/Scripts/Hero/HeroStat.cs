@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
@@ -10,10 +11,6 @@ public struct Data
     public int MaxExp; //최고 경험치
     public int CurExp; //현재 경험치
 
-
-    public float AttackSp; //공격속도
-    public float AttackcoolTime; //공격속도 쿨타임
-    public float MoveSp; //이동속도
     public float MaxHp; //최대 체력
     public float CurHp; //현재체력
     public float HpRecovery; //회복력
@@ -21,16 +18,25 @@ public struct Data
     public int MaxbulletCount; // 최대 탄창 수
     public int CurbulletCount; //현재탄창 수
     public int bulletCount; //총알수
+    public float ReloadTime; //재장전 속도
+    public float ReloadCoolTime; //재장전 쿨타임
+
+    public float AttackSp; //공격속도
+    public float AttackcoolTime; //공격속도 쿨타임
+    public float MoveSp; //이동속도
 
     public float Damage; //공격력
     public float LongDamage; //원거리 공격    
     public float Accuracy; //명중률
     public float Range; //공격범위
-    public float defense; //방어력
+    public float Defense; //방어력
 
-    public float money; //수확
-    public float lucky; //행운
+    public int HasMoney; //수확
+    public float Lucky; //행운
     public float Science; //기계화
+
+    public float skillMaxTime; //스킬 쿨타임
+    public float skillCurTime; //스킬 현재 쿨타임
 }
 
 public abstract class HeroStat : MonoBehaviour
@@ -45,7 +51,11 @@ public abstract class HeroStat : MonoBehaviour
     public List<GameObject> FoundObjects;
     public GameObject enemy;
     public float shortDis;
+
+    public bool isDodge = false;
+
     public abstract void InitStat();
+    public abstract void Skill();
 
     public virtual void Move(GameObject player, Animator anim)
     {
@@ -72,26 +82,30 @@ public abstract class HeroStat : MonoBehaviour
         if (FoundObjects.Count == 0)
         {
             // 처리할 내용 (예: 적이 없는 경우 처리)
-            return;
+            Vector3 lookVec = new Vector3(hAxis, 0, vAxis);
+            transform.LookAt(transform.position + lookVec);
         }
-
-        shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
-
-        enemy = FoundObjects[0];
-
-        foreach (GameObject found in FoundObjects)
+        else
         {
-            float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
+            shortDis = Vector3.Distance(gameObject.transform.position, FoundObjects[0].transform.position);
 
-            if (Distance < shortDis)
+            enemy = FoundObjects[0];
+
+            foreach (GameObject found in FoundObjects)
             {
-                enemy = found;
-                shortDis = Distance;
-            }
-        }
-        gameObject.transform.DOLookAt(enemy.transform.position, data.Accuracy);
+                float Distance = Vector3.Distance(gameObject.transform.position, found.transform.position);
 
-        if (shortDis < data.Range) Shot(anim);
+                if (Distance < shortDis)
+                {
+                    enemy = found;
+                    shortDis = Distance;
+                }
+            }
+
+            if (!isDodge) gameObject.transform.DOLookAt(enemy.transform.position, data.Accuracy);
+
+            if (shortDis < data.Range) Shot(anim);
+        }
     }
     public virtual void Shot(Animator anim)
     {
@@ -110,33 +124,24 @@ public abstract class HeroStat : MonoBehaviour
         }
         else
         {
+            data.ReloadCoolTime -= Time.deltaTime;
+
+            Image ReloadGauge = GameObject.Find("UI").transform.Find("ReloadGauge").GetComponent<Image>();
+            ReloadGauge.fillAmount = 1.0f - (Mathf.Lerp(0, 100, data.ReloadCoolTime / data.ReloadTime) / 100);
+
             anim.SetTrigger("Reload");
 
-            data.CurbulletCount = data.MaxbulletCount;
+            if (data.ReloadCoolTime < 0)
+            {
+                data.CurbulletCount = data.MaxbulletCount;
 
-            data.AttackcoolTime = data.AttackSp;
+                data.ReloadCoolTime = data.ReloadTime;
+                data.AttackcoolTime = data.AttackSp;
+            }
         }
     }
     public virtual void LevelUp()
     {
-        data.level++;
-        data.AttackSp++;
-        data.AttackcoolTime++;
-        data.MoveSp++;
-        data.MaxHp++;
-        data.CurHp++;
-        data.HpRecovery++;
-
-        data.MaxbulletCount++;
-        data.CurbulletCount++;
-        data.bulletCount++;
-
-        data.Damage++;
-        data.LongDamage++;
-        data.Accuracy++;
-        data.Range++;
-        data.defense++;
-
-        data.lucky++;
+        //Stat Upgrade
     }
 }

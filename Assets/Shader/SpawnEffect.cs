@@ -46,7 +46,7 @@ public class SpawnEffect : MonoBehaviour
     {
         iTween.ValueTo(gameObject, iTween.Hash(
             "from", start, "to", dest, "time", time, "onupdatetarget", gameObject,
-            "onupdate", "BodyTweenOnUpdate", "oncomplte", "BodyTweenOnComplte",
+            "onupdate", "BodyTweenOnUpdate", "oncomplete", "BodyTweenOnComplte",
             "easetype", iTween.EaseType.easeInOutCubic));
     }
     void BodyTweenOnUpdate(float value)
@@ -63,7 +63,7 @@ public class SpawnEffect : MonoBehaviour
     {
         iTween.ValueTo(gameObject, iTween.Hash(
             "from", start, "to", dest, "time", time, "onupdatetarget", gameObject,
-            "onupdate", "WeaponTweenOnUpdate", "oncomplte", "WeaponTweenOnComplte",
+            "onupdate", "WeaponTweenOnUpdate", "oncomplete", "WeaponTweenOnComplte",
             "easetype", iTween.EaseType.easeInOutCubic));
     }
     void WeaponTweenOnUpdate(float value)
@@ -80,7 +80,7 @@ public class SpawnEffect : MonoBehaviour
     {
         iTween.ValueTo(gameObject, iTween.Hash(
             "from", start, "to", dest, "time", time, "onupdatetarget", gameObject,
-            "onupdate", "HeadTweenOnUpdate", "oncomplte", "HeadTweenOnComplte",
+            "onupdate", "HeadTweenOnUpdate", "oncomplete", "HeadTweenOnComplte",
             "easetype", iTween.EaseType.easeInOutCubic));
     }
     void HeadTweenOnUpdate(float value)
@@ -90,5 +90,6 @@ public class SpawnEffect : MonoBehaviour
     void HeadTweenOnComplte()
     {
         _Head_renderer.material = Head_mtrlOrg;
+        GetComponent<PlayerController>().isStart = true;
     }
 }

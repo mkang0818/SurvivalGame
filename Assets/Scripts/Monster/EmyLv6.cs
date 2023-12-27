@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.AI;
 
 public class EmyLv6 : Enemy
@@ -23,10 +24,13 @@ public class EmyLv6 : Enemy
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
-            lookVec = new Vector3(h, 0, v) * 2f;
-            transform.LookAt(target.transform.position + lookVec);
+            lookVec = new Vector3(h, 0, v) * 4f;
 
-            agent.speed = 2;
+            transform.DOLookAt(target.transform.position + lookVec, 0.2f);
+
+            Anim.SetBool("Run", false);
+            Anim.SetBool("Walk", true);
+
             agent.SetDestination(target.transform.position);
 
             float Distance = Vector3.Distance(gameObject.transform.position, target.transform.position);
@@ -36,8 +40,10 @@ public class EmyLv6 : Enemy
                 StartCoroutine(Rush());
             }
         }
-        else
+        else //·¯½¬
         {
+            Anim.SetBool("Walk", false);
+            Anim.SetBool("Run", true);
             Vector3 moveDir = transform.forward;
             transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, Time.deltaTime * 10);
         }
@@ -47,6 +53,7 @@ public class EmyLv6 : Enemy
         EmyStat.EmyHP = 1;
         EmyStat.EmyAttack = 1;
         EmyStat.EmyMoveSp = 1;
+        EmyStat.EmySkillMoveSp = 10;
     }
     public override void Attack(GameObject target)
     {

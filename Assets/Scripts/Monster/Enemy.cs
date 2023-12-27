@@ -7,13 +7,12 @@ public struct MonsterStat {
     public float EmyHP;
     public float EmyAttack;
     public float EmyMoveSp;
-
+    public float EmySkillMoveSp;
 }
 
 public abstract class Enemy : MonoBehaviour
 {
     public MonsterStat EmyStat;
-
     public abstract void initSetting();
     public abstract void Attack(GameObject target);
     public virtual void Dead(GameObject Money)

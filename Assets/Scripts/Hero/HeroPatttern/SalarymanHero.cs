@@ -7,24 +7,45 @@ public  class SalarymanHero : HeroStat
 {
     public override void InitStat()
     {
+        //레벨
         data.level = 10;
+        data.MaxExp = 100;
+        data.CurExp = 0;
 
-        data.MoveSp = 5;
-
+        //생명
         data.MaxHp = 10;
         data.CurHp = 10;
+        data.HpRecovery = 0.5f;
 
-        data.HpRecovery = 10;
+        //총알 수
+        data.MaxbulletCount = 30;
+        data.CurbulletCount = 30;
+        data.bulletCount = 5;
 
+        //공격
         data.AttackSp = 1;
         data.AttackcoolTime = 1;
+        data.MoveSp = 5;
 
-        data.Damage = 10;
-        data.LongDamage = 10;
+        data.Damage = 3;
+        data.LongDamage = 3;
+        data.Accuracy = 0.5f;
+        data.Range = 10;
+        data.Defense = 1;
 
-        //lucky, 
+        //세부능력
+        data.HasMoney = 1;
+        data.Lucky = 0.1f;
+        data.Science = 0.1f;
+
+        //스킬
+        data.skillMaxTime = 8f;
+        data.skillCurTime = 8f;
     }
+    public override void Skill()
+    {
 
+    }
     public override void Move(GameObject player, Animator anim)
     {
         base.Move(player, anim);

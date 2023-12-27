@@ -11,6 +11,7 @@ public class EmyLv4 : Enemy
         EmyStat.EmyHP = 1;
         EmyStat.EmyAttack = 1;
         EmyStat.EmyMoveSp = 3;
+        EmyStat.EmySkillMoveSp = 10;
     }
     public override void Attack(GameObject target)
     {

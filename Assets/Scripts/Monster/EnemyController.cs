@@ -1,46 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public Enemy EmyType;
+    private NavMeshAgent agent;
+
+    public Enemy Emy;
     GameObject target;
 
     public GameObject MoneyPrefab;
-    float speed = 3;
+
     [HideInInspector]
     public float hp = 5f;
+
+    [HideInInspector] public bool IsSlowTime = false;
+
+    float CurslowTime = 3;
+    float MaxslowTime = 3;
+    
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
 
-        EmyType.initSetting();
-        EmyType.Attack(target);
+        agent = GetComponent<NavMeshAgent>();
+
+        Emy.initSetting();
+        Emy.Attack(target);
     }
 
     // Update is called once per frame
     void Update()
     {
-        EmyType.Dead(MoneyPrefab);
-    }
-    void followTarget()
-    {
-        transform.LookAt(target.transform);
+        Emy.Dead(MoneyPrefab);
 
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
+        SlowTime();
+    }
+    void SlowTime()
+    {
+        if (IsSlowTime)
+        {
+            CurslowTime -= Time.deltaTime;
+
+            if (CurslowTime <= 0)
+            {
+                Emy.EmyStat.EmySkillMoveSp = 7f;
+                agent.speed = 3f;
+
+                IsSlowTime = false;
+                CurslowTime = MaxslowTime;
+            }
+
+            Emy.EmyStat.EmySkillMoveSp = 3.5f;
+            agent.speed = 1f;
+        }
     }
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Bullet"))
         {
             Destroy(col.gameObject);
-            EmyType.EmyStat.EmyHP -= 5;
+            Emy.EmyStat.EmyHP -= target.GetComponent<PlayerController>().herostat.data.Damage;
         }
         if (col.gameObject.CompareTag("Player"))
         {
-            bool isEvasion = RandomEvasion(col.GetComponent<PlayerController>().herostat.data.lucky);
+            bool isEvasion = RandomEvasion(col.GetComponent<PlayerController>().herostat.data.Lucky);
 
             if (isEvasion)
             {
@@ -48,7 +74,10 @@ public class EnemyController : MonoBehaviour
             }
             else
             {
-                col.GetComponent<PlayerController>().herostat.data.CurHp -= (int)(EmyType.EmyStat.EmyAttack - (0.5 * col.GetComponent<HeroStat>().data.defense));
+                if (!col.GetComponent<PlayerController>().NoDamage)
+                {
+                    col.GetComponent<PlayerController>().herostat.data.CurHp -= (int)(Emy.EmyStat.EmyAttack - (0.5 * col.GetComponent<HeroStat>().data.Defense));
+                }
             }
         }
     }

@@ -15,7 +15,7 @@ public class InGameManager : MonoBehaviour
 
     public TextMeshProUGUI TxtStage;
     public TextMeshProUGUI TxtTime;
-    float Timer = 30;
+    float Timer = 60;
     
     [HideInInspector]
     public int StageNum = 1;
@@ -25,14 +25,18 @@ public class InGameManager : MonoBehaviour
     void Start()
     {
         player = Instantiate(CharPrefabs[GameManager.instance.playerNum],Vector3.zero,Quaternion.identity);
+
+        Spawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        TimeManager();
-        MoneyUpdate();
-        Spawn();
+        if (player.GetComponent<PlayerController>().isStart)
+        {
+            TimeManager();
+            MoneyUpdate();
+        }
     }
     void Spawn()
     {
@@ -57,7 +61,7 @@ public class InGameManager : MonoBehaviour
                 SpawnObj[5].SetActive(true);
                 break;
             case 20:
-                print("보스 출연");
+                print("보스 출현");
                 break;
         }
     }
@@ -68,7 +72,7 @@ public class InGameManager : MonoBehaviour
     void TimeManager()
     {
         Timer -= Time.deltaTime;
-        //TxtStage.text = StageNum.ToString() + "Stage";
+        TxtStage.text = StageNum.ToString() + "Stage";
         TxtTime.text = ((int)Timer).ToString();
 
         //상점 ui 켜기
@@ -81,6 +85,15 @@ public class InGameManager : MonoBehaviour
                 Destroy(enemy);
             }
             player.transform.position = Vector3.zero;
+
+            for (int i = 0; i < StageNum; i++)
+            {
+                SpawnObj[i].SetActive(false);
+            }
+
+            for(int i=0;i<6;i++) SpawnObj[i].SetActive(false);
+
+
             StoreUI.SetActive(true);
         }
     }
@@ -93,6 +106,8 @@ public class InGameManager : MonoBehaviour
         StoreUI.SetActive(false);
         Timer = 30;
         StageNum += 1;
+
+        Spawn();
     }
     public void Get1Btn()
     {

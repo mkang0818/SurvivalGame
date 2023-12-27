@@ -4998,8 +4998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  herostat: {fileID: 4541590032131542810}
   anim: {fileID: 1762018173025169313}
+  herostat: {fileID: 4541590032131542810}
+  NoDamage: 0
+  isStart: 0
 --- !u!54 &-3393459677194512512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5060,6 +5062,15 @@ MonoBehaviour:
   FoundObjects: []
   enemy: {fileID: 0}
   shortDis: 0
+  isDodge: 0
+  HeelZone: {fileID: 3690569466333372065, guid: 49dcc4b9b36ddf840b1acbcca22e7fe2,
+    type: 3}
+  Turret: {fileID: 939335178, guid: 29f393efdc386ee41aee6077912722cf, type: 3}
+  Portal: {fileID: 6179283027987769056, guid: cdfbcd3b4b80b4c4faf3c3953712f080, type: 3}
+  spawnHero: {fileID: 359554459282209763, guid: 586bab38c75b5b147b9c1df83c23142b,
+    type: 3}
+  grenadeObj: {fileID: 4356668547043171501, guid: 42d1c1dab5c2d614a8e904dd8abc51b9,
+    type: 3}
 --- !u!114 &807993245
 MonoBehaviour:
   m_ObjectHideFlags: 0

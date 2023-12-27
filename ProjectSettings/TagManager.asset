@@ -8,14 +8,8 @@ TagManager:
   - Bullet
   - FxTemporaire
   - Money
-  - Lv1Emy
-  - Lv2Emy
-  - Lv3Emy
-  - Lv4Emy
-  - Lv5Emy
-  - Lv6Emy
-  - BossEmy
-  - BossMonster
+  - HeelZone
+  - Ground
   layers:
   - Default
   - TransparentFX

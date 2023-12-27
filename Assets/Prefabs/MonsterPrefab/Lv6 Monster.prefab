@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: -6269684578619063781}
   - component: {fileID: 7564531141151222618}
   - component: {fileID: 4187733791742652416}
+  - component: {fileID: -5585070586314670460}
   m_Layer: 6
   m_Name: Lv6 Monster
   m_TagString: Enemy
@@ -834,10 +835,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f684b15a890cd4f9541e4e53650b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmyType: {fileID: 7564531141151222618}
+  Emy: {fileID: 7564531141151222618}
   MoneyPrefab: {fileID: 875073071404757921, guid: 10e614a6041a3c2419df018b2319e5d3,
     type: 3}
   hp: 5
+  IsSlowTime: 0
+--- !u!195 &-5585070586314670460
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347061273194974142}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3349095015517998420
 GameObject:
   m_ObjectHideFlags: 0

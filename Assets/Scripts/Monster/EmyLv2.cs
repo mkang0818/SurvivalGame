@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.AI;
 
 public class EmyLv2 : Enemy
@@ -13,20 +14,24 @@ public class EmyLv2 : Enemy
     bool isFind = true;
 
     Vector3 lookVec;
+    public float rushSp = 10;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
     }
     private void Update()
     {
-        if (isFind)
+        if (isFind) 
         {
             float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
             lookVec = new Vector3(h, 0, v) * 4f;
-            transform.LookAt(target.transform.position + lookVec);
-            
-            agent.speed = 2;
+
+            transform.DOLookAt(target.transform.position + lookVec, 0.2f);
+
+            Anim.SetBool("Run", false);
+            Anim.SetBool("Walk", true);
+
             agent.SetDestination(target.transform.position);
 
             float Distance = Vector3.Distance(gameObject.transform.position, target.transform.position);
@@ -36,10 +41,12 @@ public class EmyLv2 : Enemy
                 StartCoroutine(Rush());
             }
         }
-        else
+        else //·¯½¬
         {
+            Anim.SetBool("Walk",false);
+            Anim.SetBool("Run",true);
             Vector3 moveDir = transform.forward;
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, Time.deltaTime * 10);
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, Time.deltaTime * EmyStat.EmySkillMoveSp);
         }
     }
     public override void initSetting()
@@ -47,6 +54,7 @@ public class EmyLv2 : Enemy
         EmyStat.EmyHP = 1;
         EmyStat.EmyAttack = 1;
         EmyStat.EmyMoveSp = 1;
+        EmyStat.EmySkillMoveSp = 7;
     }
     public override void Attack(GameObject target)
     {
@@ -56,7 +64,7 @@ public class EmyLv2 : Enemy
     {
         yield return new WaitForSeconds(1f);
         isFind = false;
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1.5f);
         isFind = true;
         agent.isStopped = false;
     }

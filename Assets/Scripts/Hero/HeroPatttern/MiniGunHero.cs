@@ -7,30 +7,44 @@ public  class MiniGunHero : HeroStat
 {
     public override void InitStat()
     {
+        //레벨
         data.level = 10;
-
-        data.MoveSp = 5;
-
+        data.MaxExp = 100;
+        data.CurExp = 0;
+        
+        //생명
         data.MaxHp = 10;
         data.CurHp = 10;
         data.HpRecovery = 0.5f;
-
-        data.AttackSp = 1;
-        data.AttackcoolTime = 1;
         
+        //총알 수
         data.MaxbulletCount = 30;
         data.CurbulletCount = 30;
         data.bulletCount = 5;
+
+        //공격
+        data.AttackSp = 1;
+        data.AttackcoolTime = 1;
+        data.MoveSp = 5;
 
         data.Damage = 3;
         data.LongDamage = 3;
         data.Accuracy = 0.5f;
         data.Range = 10;
-        data.defense = 3;
+        data.Defense = 1;
 
-        data.money = 0.1f;
-        data.lucky = 0.1f;
+        //세부능력
+        data.HasMoney = 1;
+        data.Lucky = 0.1f;
         data.Science = 0.1f;
+
+        //스킬
+        data.skillMaxTime = 8f;
+        data.skillCurTime = 8f;
+    }
+    public override void Skill()
+    {
+
     }
 
     public override void Move(GameObject player, Animator anim)

@@ -5964,14 +5964,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4920267076926813308}
   - component: {fileID: 4920267076926813283}
-  - component: {fileID: -7680699425390155912}
   - component: {fileID: -2715609916563254114}
   - component: {fileID: 2630841553824602042}
   - component: {fileID: -1195680768723125786}
-  - component: {fileID: 5856940188119342316}
   - component: {fileID: 495784530024833797}
+  - component: {fileID: -238631524034132209}
+  - component: {fileID: 1086879066198714008}
   m_Layer: 0
-  m_Name: RobotGravitygun
+  m_Name: RobotGravitygun 2
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6015,22 +6015,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-7680699425390155912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4920267076926813282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b7da5b0f4d2b0744a1c0c3b74a96ccc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 4920267076926813283}
-  herostat: {fileID: 5856940188119342316}
-  NoDamage: 0
-  isStart: 0
 --- !u!54 &-2715609916563254114
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6076,27 +6060,6 @@ MonoBehaviour:
   ShotPos: {fileID: 7377464752879477209}
   BulletPrefab: {fileID: 1795072395756124, guid: d223fbf886f2aa4408426d093198ef12,
     type: 3}
---- !u!114 &5856940188119342316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4920267076926813282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618e5ee421dbe714bb980dfef3c97b6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FoundObjects: []
-  enemy: {fileID: 0}
-  shortDis: 0
-  isDodge: 0
-  HeelZone: {fileID: 0}
-  Turret: {fileID: 0}
-  Portal: {fileID: 6179283027987769056, guid: cdfbcd3b4b80b4c4faf3c3953712f080, type: 3}
-  spawnHero: {fileID: 4920267076926813282}
-  grenadeObj: {fileID: 0}
 --- !u!114 &495784530024833797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6125,6 +6088,42 @@ MonoBehaviour:
   BodyfadeTime: 2
   WeaponfadeTime: 1
   HeadfadeTime: 2
+--- !u!114 &-238631524034132209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920267076926813282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40806c2de0702df4e91895ec4762da09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 4920267076926813283}
+  herostat: {fileID: 1086879066198714008}
+  NoDamage: 0
+--- !u!114 &1086879066198714008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920267076926813282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a69d4ae5b13c214d851c917d0e9327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoundObjects: []
+  enemy: {fileID: 0}
+  shortDis: 0
+  isDodge: 0
+  HeelZone: {fileID: 0}
+  Turret: {fileID: 0}
+  Portal: {fileID: 0}
+  spawnHero: {fileID: 0}
+  grenadeObj: {fileID: 0}
 --- !u!1 &4920267076973512329
 GameObject:
   m_ObjectHideFlags: 0

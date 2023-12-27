@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class SniperHero : HeroStat
+public class RobotHero2 : HeroStat
 {
     Animator anim;
 
@@ -59,7 +59,7 @@ public class SniperHero : HeroStat
     }
     public override void Skill()
     {
-        //총알 데미지 강함, 총알 관통 2회
+        //없음
     }
     void spawnSkill()
     {

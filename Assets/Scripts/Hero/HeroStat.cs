@@ -33,6 +33,7 @@ public struct Data
 
     public int HasMoney; //수확
     public float Lucky; //행운
+    public float HasExp; //경험치획득
     public float Science; //기계화
 
     public float skillMaxTime; //스킬 쿨타임

@@ -37,8 +37,8 @@ public class ManHero : HeroStat
         data.bulletCount = 5;
         data.ReloadTime = 2;
         data.ReloadCoolTime = 2;
-    //공격
-    data.AttackSp = 1;
+        //공격
+        data.AttackSp = 1;
         data.AttackcoolTime = 1;
         data.MoveSp = 5;
 
@@ -59,8 +59,8 @@ public class ManHero : HeroStat
     }
     public override void Skill()
     {
-        //HeelPack
-        /*if (data.skillCurTime <= 0)
+        //HeelPack-H1
+        if (data.skillCurTime <= 0)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -69,121 +69,7 @@ public class ManHero : HeroStat
                 data.skillCurTime = data.skillMaxTime;
                 Destroy(HeelPack, 5f);
             }
-        }*/
-
-        //Invincible 무적
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GetComponent<PlayerController>().NoDamage = true;
-                data.skillCurTime = data.skillMaxTime;
-
-                Invoke("InitSkill", 3f);
-            }
-        }*/
-        //SlowTimer
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                for (int i = 0; i < enemies.Length; i++)
-                {
-                    enemies[i].GetComponent<EnemyController>().IsSlowTime = true;
-                }
-                data.skillCurTime = data.skillMaxTime;
-            }
-        }*/
-
-        //Turret
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                float Xpos = Random.Range(-6.5f, 6.5f);
-                float Zpos = Random.Range(-6.5f, 6.5f);
-
-                GameObject TurretObj = Instantiate(Turret, new Vector3(Xpos,0,Zpos), Quaternion.identity);
-                TurretObj.GetComponent<TurretController>().turretLevel = data.Science;
-
-                data.skillCurTime = data.skillMaxTime;
-            }
-        }*/
-
-        //Dodge
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) && transform.position != Vector3.zero)
-            {
-                base.isDodge = true; 
-                anim.SetTrigger("IsDodge");
-                if (base.isDodge)
-                {
-                    Invoke("DodgeStart", 0.3f);
-                }        
-                Invoke("DodgeEnd", 0.6f);
-                data.skillCurTime = data.skillMaxTime;
-            }
-        }*/
-
-        //SpawnHero
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                PortalObj = Instantiate(Portal, new Vector3(0, 1.2f, 4), Quaternion.identity);
-
-                Invoke("spawnSkill", 2f);
-                data.skillCurTime = data.skillMaxTime;
-            }
-        }*/
-        //StrongHero
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                data.Damage *= 2;
-
-                Invoke("PowerSkill", 10f);
-                data.skillCurTime = data.skillMaxTime;
-            }
-        }*/
-        //BombHero
-        if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit rayHit;
-                if (Physics.Raycast(ray,out rayHit, 100))
-                {
-                    Vector3 nextVec = rayHit.point - transform.position;
-                    nextVec.y = 2; //나가는 거리 변수
-
-                    Vector3 playerPos = new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z);
-                    GameObject instantGrenade = Instantiate(grenadeObj, playerPos, Quaternion.identity);
-                    Rigidbody rigidGrenade = instantGrenade.GetComponent<Rigidbody>();
-                    rigidGrenade.AddForce(nextVec,ForceMode.Impulse);
-                    rigidGrenade.AddTorque(Vector3.back*10,ForceMode.Impulse);
-
-                    gameObject.transform.DOLookAt(nextVec, 1f);
-                }
-
-                data.skillCurTime = data.skillMaxTime;
-            }
         }
-        //MoneyHero
-        /*if (data.skillCurTime <= 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                data.HasMoney *= 3;
-
-                Invoke("spawnSkill", 2f);
-                data.skillCurTime = data.skillMaxTime;
-            }
-        }*/
     }
     void spawnSkill()
     {

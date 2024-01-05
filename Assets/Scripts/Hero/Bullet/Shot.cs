@@ -12,7 +12,7 @@ public class Shot : MonoBehaviour
     {
         GameObject bullet = Instantiate(BulletPrefab, ShotPos.transform.position, ShotPos.transform.rotation);
 
-        Destroy(bullet, 0.1f);
+        Destroy(bullet, 0.3f);
     }
 
 }

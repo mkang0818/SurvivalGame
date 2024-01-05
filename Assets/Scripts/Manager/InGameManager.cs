@@ -38,33 +38,7 @@ public class InGameManager : MonoBehaviour
             MoneyUpdate();
         }
     }
-    void Spawn()
-    {
-        switch (StageNum)
-        {
-            case 1:
-                SpawnObj[0].SetActive(true);
-                break;
-            case 3:
-                SpawnObj[1].SetActive(true);
-                break;
-            case 6:
-                SpawnObj[2].SetActive(true);
-                break;
-            case 9:
-                SpawnObj[3].SetActive(true);
-                break;
-            case 11:
-                SpawnObj[4].SetActive(true);
-                break;
-            case 14:
-                SpawnObj[5].SetActive(true);
-                break;
-            case 20:
-                print("보스 출현");
-                break;
-        }
-    }
+    
     void MoneyUpdate()
     {
         TxtMoney.text = money.ToString();
@@ -108,6 +82,33 @@ public class InGameManager : MonoBehaviour
         StageNum += 1;
 
         Spawn();
+    }
+    void Spawn()
+    {
+        switch (StageNum)
+        {
+            case 1:
+                SpawnObj[0].SetActive(true);
+                break;
+            case 3:
+                SpawnObj[1].SetActive(true);
+                break;
+            case 6:
+                SpawnObj[2].SetActive(true);
+                break;
+            case 9:
+                SpawnObj[3].SetActive(true);
+                break;
+            case 11:
+                SpawnObj[4].SetActive(true);
+                break;
+            case 14:
+                SpawnObj[5].SetActive(true);
+                break;
+            case 20:
+                print("보스 출현");
+                break;
+        }
     }
     public void Get1Btn()
     {

@@ -13,7 +13,7 @@ public class SpawnLv1 : MonoBehaviour
     public GameObject[] monsterArr = new GameObject[0];
 
 
-    float level = 1f;
+    float level = 2f;
     // Start is called before the first frame update
     void Start()
     {

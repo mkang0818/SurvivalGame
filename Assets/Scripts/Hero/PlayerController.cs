@@ -44,8 +44,9 @@ public class PlayerController : MonoBehaviour
 
 
             herostat.Move(this.gameObject, anim);
+            herostat.LookMouseCursor();
             herostat.Dead();
-            herostat.FindEmy(anim);
+            herostat.Shot(anim);
             if (herostat.data.skillCurTime <= 0)
             {
                 herostat.Skill();
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
             TxtBulletCount.text = herostat.data.CurbulletCount + " / " + herostat.data.MaxbulletCount;
         }
     }
+
     void UpdateHP()
     {
         herostat.data.CurHp += herostat.data.HpRecovery;

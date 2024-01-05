@@ -64,7 +64,8 @@ public abstract class HeroStat : MonoBehaviour
         vAxis = Input.GetAxisRaw("Vertical");
 
         moveVec = new Vector3(hAxis, 0, vAxis).normalized;
-
+        
+        player.transform.rotation = Quaternion.Lerp(player.transform.rotation, Quaternion.LookRotation(moveVec), Time.deltaTime * 4);
         player.transform.position += moveVec * data.MoveSp * Time.deltaTime;
 
         anim.SetBool("Run", moveVec != Vector3.zero);
@@ -78,7 +79,7 @@ public abstract class HeroStat : MonoBehaviour
     }
     public virtual void FindEmy(Animator anim)
     {
-        FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
+        /*FoundObjects = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
 
         if (FoundObjects.Count == 0)
         {
@@ -106,6 +107,16 @@ public abstract class HeroStat : MonoBehaviour
             if (!isDodge) gameObject.transform.DOLookAt(enemy.transform.position, data.Accuracy);
 
             if (shortDis < data.Range) Shot(anim);
+        }*/
+    }
+    public virtual void LookMouseCursor()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hitResult;
+        if (Physics.Raycast(ray, out hitResult))
+        {
+            Vector3 mouseDir = new Vector3(hitResult.point.x, transform.position.y, hitResult.point.z) - transform.position;
+            transform.forward = mouseDir;
         }
     }
     public virtual void Shot(Animator anim)
@@ -116,11 +127,15 @@ public abstract class HeroStat : MonoBehaviour
         {
             if (data.AttackcoolTime <= 0)
             {
-                anim.SetTrigger("Shot");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    anim.SetTrigger("Shot");
 
-                data.CurbulletCount -= data.bulletCount;
+                    data.CurbulletCount -= data.bulletCount;
 
-                data.AttackcoolTime = data.AttackSp;
+                    data.AttackcoolTime = data.AttackSp;
+                }
+
             }
         }
         else

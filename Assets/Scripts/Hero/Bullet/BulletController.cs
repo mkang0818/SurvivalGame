@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
+    public int BulletcurHP;
+
     public float speed = 15f;
     public float hitOffset = 0f;
     public bool UseFirePointRotation;
@@ -16,12 +18,13 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         if (flash != null)
         {
             //Instantiate flash effect on projectile position
             var flashInstance = Instantiate(flash, transform.position, Quaternion.identity);
             flashInstance.transform.forward = gameObject.transform.forward;
-            
+
             //Destroy flash effect depending on particle Duration time
             var flashPs = flashInstance.GetComponent<ParticleSystem>();
             if (flashPs != null)
@@ -34,21 +37,39 @@ public class BulletController : MonoBehaviour
                 Destroy(flashInstance, flashPsParts.main.duration);
             }
         }
-        Destroy(gameObject,5);
-	}
+        Destroy(gameObject, 5);
+    }
 
-    void FixedUpdate ()
+    void FixedUpdate()
     {
-		if (speed != 0)
+        if (speed != 0)
         {
             rb.velocity = transform.forward * speed;
             //transform.position += transform.forward * (speed * Time.deltaTime);         
         }
-	}
 
+        if (BulletcurHP <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            GameObject hiteffect = Instantiate(hit, transform.position, Quaternion.identity);
+            Destroy(hiteffect,0.2f);
+        }
+    }
 
     void OnCollisionEnter(Collision collision)
     {
+        //총알끼리 충돌방지
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            return;
+        }
+
         //Lock all axes movement and rotation
         rb.constraints = RigidbodyConstraints.FreezeAll;
         speed = 0;
@@ -87,7 +108,11 @@ public class BulletController : MonoBehaviour
                 Destroy(detachedPrefab, 1);
             }
         }
-        //Destroy projectile on collision
-        Destroy(gameObject);
+        //Destroy projectile on collision 총알 충돌 시 삭제
+        if (!collision.gameObject.CompareTag("Enemy"))
+        {
+            print("총알충돌");
+            Destroy(gameObject);
+        }
     }
 }

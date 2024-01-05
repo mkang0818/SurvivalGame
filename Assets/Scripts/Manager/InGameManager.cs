@@ -26,7 +26,7 @@ public class InGameManager : MonoBehaviour
     {
         player = Instantiate(CharPrefabs[GameManager.instance.playerNum],Vector3.zero,Quaternion.identity);
 
-        Spawn();
+        Invoke("Spawn",1);
     }
 
     // Update is called once per frame

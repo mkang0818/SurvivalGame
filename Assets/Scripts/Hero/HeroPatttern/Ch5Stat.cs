@@ -68,17 +68,12 @@ public class Ch5Stat : HeroStat
                 anim.SetTrigger("IsDodge");
                 if (base.isDodge)
                 {
-                    Invoke("DodgeStart", 0.3f);
+                    Invoke("DodgeStart", 0.1f);
                 }        
-                Invoke("DodgeEnd", 0.6f);
+                Invoke("DodgeEnd", 0.5f);
                 data.skillCurTime = data.skillMaxTime;
             }
         }
-    }
-    void spawnSkill()
-    {
-        GameObject spawnHeroObj = Instantiate(spawnHero, new Vector3(0, 0, 4), Quaternion.identity);
-        PortalObj.SetActive(false);
     }
     void DodgeStart()
     {
@@ -86,12 +81,12 @@ public class Ch5Stat : HeroStat
         float v = Input.GetAxisRaw("Vertical");
         Vector3 lookVec = new Vector3(h, 0, v);
         transform.LookAt(transform.position + lookVec);
-        data.MoveSp *= 3;
+        data.MoveSp *= 2;
     }
     void DodgeEnd()
     {
         base.isDodge = false;
-        data.MoveSp /= 3;
+        data.MoveSp /= 2;
     }
     void PowerSkill()
     {
@@ -106,12 +101,16 @@ public class Ch5Stat : HeroStat
     {
         base.Dead();
     }
+    public override void LookMouseCursor()
+    {
+        base.LookMouseCursor();
+    }
     public override void FindEmy(Animator anim)
     {
         base.FindEmy(anim);
     }
     public override void Shot(Animator anim)
     {
-        base.Shot(anim);
+        if (!isDodge) base.Shot(anim);
     }
 }

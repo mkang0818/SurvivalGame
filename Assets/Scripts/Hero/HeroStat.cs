@@ -65,7 +65,7 @@ public abstract class HeroStat : MonoBehaviour
 
         moveVec = new Vector3(hAxis, 0, vAxis).normalized;
         
-        player.transform.rotation = Quaternion.Lerp(player.transform.rotation, Quaternion.LookRotation(moveVec), Time.deltaTime * 4);
+        //player.transform.rotation = Quaternion.Lerp(player.transform.rotation, Quaternion.LookRotation(moveVec), Time.deltaTime * 4);
         player.transform.position += moveVec * data.MoveSp * Time.deltaTime;
 
         anim.SetBool("Run", moveVec != Vector3.zero);

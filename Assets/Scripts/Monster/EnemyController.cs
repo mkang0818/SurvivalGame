@@ -61,7 +61,7 @@ public class EnemyController : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bullet"))
         {
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<BulletController>().BulletcurHP -= 1;
             Emy.EmyStat.EmyHP -= target.GetComponent<PlayerController>().herostat.data.Damage;
         }
         if (col.gameObject.CompareTag("Player"))

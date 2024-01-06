@@ -850,6 +850,7 @@ MonoBehaviour:
     type: 3}
   hp: 5
   IsSlowTime: 0
+  hitEffect: {fileID: 1690548281334034, guid: 60ff48a39b3e7b644aa620b288bb256e, type: 3}
 --- !u!195 &-2337698393374683154
 NavMeshAgent:
   m_ObjectHideFlags: 0

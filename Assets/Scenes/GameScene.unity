@@ -14718,7 +14718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   CharPrefabs:
-  - {fileID: 1762018173025169312, guid: 5811f4236f7f88b41b2a1da538566706, type: 3}
+  - {fileID: 5047480193501460239, guid: 879f3c2143ca95744ab0aa427ceb5c96, type: 3}
   - {fileID: 5824428352053320391, guid: 9c86e41b5e19b7447aa5c4f94049889d, type: 3}
   - {fileID: 5540633944302776157, guid: 1c39674f261e11b4f80664cc2e5b6b00, type: 3}
   - {fileID: 359554459282209763, guid: 586bab38c75b5b147b9c1df83c23142b, type: 3}

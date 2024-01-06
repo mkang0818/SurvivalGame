@@ -14,6 +14,11 @@ public class Ch4Stat : HeroStat
     public GameObject spawnHero;
     public GameObject grenadeObj;
 
+
+    public GameObject AttackPos;
+    public GameObject hitEffect;
+
+    bool isDash = false;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -59,29 +64,34 @@ public class Ch4Stat : HeroStat
     }
     public override void Skill()
     {
-            //현재 스킬 없음
+        //Dash - H4
+        if (data.skillCurTime <= 0)
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && transform.position != Vector3.zero)
+            {
+                isDash = true;
+                anim.SetTrigger("Dash");
+                if (isDash)
+                {
+                    Invoke("DashStart", 0.1f);
+                }
+                Invoke("DashEnd", 0.5f);
+                data.skillCurTime = data.skillMaxTime;
+            }
+        }
     }
-    void spawnSkill()
+    void DashStart()
     {
-        GameObject spawnHeroObj = Instantiate(spawnHero, new Vector3(0, 0, 4), Quaternion.identity);
-        PortalObj.SetActive(false);
-    }
-    void DodgeStart()
-    {
-        float h = Input.GetAxisRaw("Horizontal");
+        /*float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector3 lookVec = new Vector3(h, 0, v);
-        transform.LookAt(transform.position + lookVec);
-        data.MoveSp *= 3;
+        transform.LookAt(transform.position + lookVec);*/
+        data.MoveSp *= 4;
     }
-    void DodgeEnd()
+    void DashEnd()
     {
-        base.isDodge = false;
-        data.MoveSp /= 3;
-    }
-    void PowerSkill()
-    {
-        data.Damage /= 2;
+        isDash = false;
+        data.MoveSp /= 4;
     }
     public override void Move(GameObject player, Animator anim)
     {
@@ -102,6 +112,37 @@ public class Ch4Stat : HeroStat
     }
     public override void Shot(Animator anim)
     {
-        base.Shot(anim);
+        data.AttackcoolTime -= Time.deltaTime;
+
+        if (data.AttackcoolTime <= 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                anim.SetTrigger("Shot");
+                AttackPos.SetActive(true);
+                data.CurbulletCount -= data.bulletCount;
+
+                data.AttackcoolTime = data.AttackSp;
+                Invoke("AttackOff",0.2f);
+            }
+        }
+    }
+    void AttackOff()
+    {
+        AttackPos.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.transform.CompareTag("Enemy"))
+        {
+            if (isDash)
+            {
+                col.gameObject.GetComponent<EnemyController>().Emy.EmyStat.EmyHP -= data.Damage;
+
+                GameObject hiteffect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+                Destroy(hiteffect, 0.2f);
+            }
+        }
     }
 }

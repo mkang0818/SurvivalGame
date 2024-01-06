@@ -966,9 +966,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f684b15a890cd4f9541e4e53650b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmyType: {fileID: 0}
+  Emy: {fileID: 0}
   MoneyPrefab: {fileID: 0}
   hp: 5
+  IsSlowTime: 0
+  hitEffect: {fileID: 1690548281334034, guid: 60ff48a39b3e7b644aa620b288bb256e, type: 3}
 --- !u!54 &6761365640496384643
 Rigidbody:
   m_ObjectHideFlags: 0

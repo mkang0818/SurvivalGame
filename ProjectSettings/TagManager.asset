@@ -10,6 +10,7 @@ TagManager:
   - Money
   - HeelZone
   - Ground
+  - AttackPos
   layers:
   - Default
   - TransparentFX

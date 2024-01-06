@@ -19,7 +19,9 @@ public class EnemyController : MonoBehaviour
 
     float CurslowTime = 3;
     float MaxslowTime = 3;
-    
+
+
+    public GameObject hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,11 +61,20 @@ public class EnemyController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.CompareTag("Bullet"))
+        if (col.gameObject.CompareTag("AttackPos"))
+        {
+            print("사무라이공격");
+            Emy.EmyStat.EmyHP -= target.GetComponent<PlayerController>().herostat.data.Damage;
+
+            GameObject hiteffect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(hiteffect, 0.2f);
+        }
+        else if (col.gameObject.CompareTag("Bullet"))
         {
             col.gameObject.GetComponent<BulletController>().BulletcurHP -= 1;
             Emy.EmyStat.EmyHP -= target.GetComponent<PlayerController>().herostat.data.Damage;
         }
+
         if (col.gameObject.CompareTag("Player"))
         {
             bool isEvasion = RandomEvasion(col.GetComponent<PlayerController>().herostat.data.Lucky);

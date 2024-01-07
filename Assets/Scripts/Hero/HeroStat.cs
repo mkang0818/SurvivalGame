@@ -64,7 +64,7 @@ public abstract class HeroStat : MonoBehaviour
         vAxis = Input.GetAxisRaw("Vertical");
 
         moveVec = new Vector3(hAxis, 0, vAxis).normalized;
-        
+
         //player.transform.rotation = Quaternion.Lerp(player.transform.rotation, Quaternion.LookRotation(moveVec), Time.deltaTime * 4);
         player.transform.position += moveVec * data.MoveSp * Time.deltaTime;
 
@@ -129,24 +129,21 @@ public abstract class HeroStat : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    print("발사");
                     anim.SetTrigger("Shot");
-
-                    data.CurbulletCount -= data.bulletCount;
-
-                    data.AttackcoolTime = data.AttackSp;
                 }
-
             }
         }
         else
         {
+            anim.SetTrigger("Reload");
             data.ReloadCoolTime -= Time.deltaTime;
 
             Image ReloadGauge = GameObject.Find("UI").transform.Find("ReloadGauge").GetComponent<Image>();
             ReloadGauge.fillAmount = 1.0f - (Mathf.Lerp(0, 100, data.ReloadCoolTime / data.ReloadTime) / 100);
 
-            anim.SetTrigger("Reload");
 
+            print("장전중");
             if (data.ReloadCoolTime < 0)
             {
                 data.CurbulletCount = data.MaxbulletCount;

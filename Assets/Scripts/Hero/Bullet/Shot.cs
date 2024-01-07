@@ -13,6 +13,10 @@ public class Shot : MonoBehaviour
         GameObject bullet = Instantiate(BulletPrefab, ShotPos.transform.position, ShotPos.transform.rotation);
 
         Destroy(bullet, 0.3f);
+
+        GetComponent<PlayerController>().herostat.data.CurbulletCount -= 1;
+
+        GetComponent<PlayerController>().herostat.data.AttackcoolTime = GetComponent<PlayerController>().herostat.data.AttackSp;
     }
     public void CowBoyShotEvent()
     {
@@ -23,5 +27,9 @@ public class Shot : MonoBehaviour
         Destroy(bullet, 0.3f);
         Destroy(bullet1, 0.3f);
         Destroy(bullet2, 0.3f);
+
+        GetComponent<PlayerController>().herostat.data.CurbulletCount -= 3;
+
+        GetComponent<PlayerController>().herostat.data.AttackcoolTime = GetComponent<PlayerController>().herostat.data.AttackSp;
     }
 }
